@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="" />
+<meta name="author" content="Lucio Bernal, Otto Dierig, Owen Khanna" />
 
 
-<title>Legacy Admissions at Georgetown: What Students Think</title>
+<title>Legacy Admissions at Georgetown: Student Attitudes and the Role of Information</title>
 
 <script src="index_files/header-attrs-2.30/header-attrs.js"></script>
 <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -34,6 +34,18 @@
 <link href="index_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="index_files/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="index_files/navigation-1.1/tabsets.js"></script>
+<link href="index_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="index_files/highlightjs-9.12.0/highlight.js"></script>
+<link href="index_files/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
+<script src="index_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="index_files/plotly-binding-4.12.0/plotly.js"></script>
+<script src="index_files/typedarray-0.1/typedarray.min.js"></script>
+<link href="index_files/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
+<script src="index_files/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="index_files/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="index_files/plotly-main-2.25.2/plotly-latest.min.js"></script>
+<script src="index_files/kePrint-0.0.1/kePrint.js"></script>
+<link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -44,13 +56,23 @@
   ul.task-list{list-style: none;}
     </style>
 
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
 
 
 
 
 
 
-<link rel="stylesheet" href="memo_style.css" type="text/css" />
+<link rel="stylesheet" href="polling_final_style.css" type="text/css" />
 
 
 
@@ -232,10 +254,10 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Legacy Admissions at Georgetown: What
-Students Think</h1>
-<h3 class="subtitle">GOVT 2241 Class Survey — Spring 2026</h3>
-<h4 class="author"></h4>
+<h1 class="title toc-ignore">Legacy Admissions at Georgetown: Student
+Attitudes and the Role of Information</h1>
+<h3 class="subtitle">GOVT 2241 Class Survey Draft Memo</h3>
+<h4 class="author">Lucio Bernal, Otto Dierig, Owen Khanna</h4>
 <h4 class="date">April 2026</h4>
 
 </div>
@@ -245,200 +267,333 @@ Students Think</h1>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <p>Legacy admissions is the practice of giving preferential
-consideration to college applicants whose family members previously
-attended the same institution. At Georgetown University, the stakes are
-substantial. Legacy students make up an estimated 25–30% of the Class of
-2026 — more than the combined share of Black, Hispanic/Latino, and
-Native American students. According to <em>The Georgetown Hoya</em>,
-children of Georgetown graduates are admitted at nearly three times the
-rate of non-legacy applicants.</p>
-<p>This practice has attracted growing scrutiny, particularly following
-the Supreme Court’s 2023 ruling against race-conscious admissions. After
-a two-year review of its admissions processes, Georgetown announced in
-2025 that it would make no changes to its legacy preferences. In
-response, students formed <strong>Hoyas Against Legacy
-Admissions</strong>, a campaign that has engaged administrators,
-faculty, and the broader campus community.</p>
-<p>Despite this debate, relatively little is known about how current
-Georgetown undergraduates themselves view legacy admissions, a gap this
-survey aims to fill. Understanding student opinion matters because it
-surfaces the perspectives of those most directly affected by the policy
-and can inform future advocacy and institutional reform.</p>
+consideration to applicants whose family members previously attended an
+institution. This practice has long been one of the most contested
+features of elite university admissions. At Georgetown specifically, the
+stakes are high. 25-30% of Georgetown’s class of 2026 are legacy
+students, meaning Georgetown enrolled more legacies than Hispanic/Latino
+students (12% of the class of 2028), Black students (9% of the class of
+2028), or Native American students (1% of the class of 2028) combined
+(Georgetown University, 2024). According to the Georgetown Hoya,
+children of Georgetown graduates were nearly three times more likely to
+be admitted than applicants without parental connections (Steele &amp;
+Toscano, 2025). These numbers make Georgetown an important case study,
+where legacy preferences are a structural feature of how the university
+selects its student body. Understanding the scale and perceived
+legitimacy of this practice among current students is key before any
+reform can be considered by the university.</p>
+<p>The question of whether Georgetown students themselves value legacy
+admissions has direct implications for the university’s path forward.
+After a two-year review of its admissions processes, Georgetown
+announced in 2025 that it would not make any changes to its legacy
+admissions practices, arguing that the pool of legacy applicants
+represents a similarly broad array of backgrounds as the regular
+applicant pool (Georgetown University, 2025). Despite this claim, legacy
+admissions remains a controversial topic on campus, especially following
+the Supreme Court’s ruling against affirmative action. Georgetown
+students formed Hoyas Against Legacy Admissions, a campaign that met
+with university administrators, sought faculty support, and successfully
+lobbied the DC State Board of Education to pass the FAIR Act
+(legislation that would ban legacy preference at DC universities) which
+is currently awaiting a vote in the DC City Council. The tension between
+the university’s institutional defense of the policy and growing student
+opposition raises a key question: how broadly is legacy admissions
+valued or accepted among the Georgetown student population?</p>
+<p>This memo attempts to surface those students’ perspectives, with the
+goal of informing an admissions policy debate that has so far been
+dominated by administrators and outside advocates rather than the
+students most directly affected. It examines student attitudes toward
+legacy admissions using data from a random sample of Georgetown students
+administered in April 2026 (n = 385). We investigate what predicts
+opposition to legacy admissions and whether providing
+Georgetown-specific information about the program changes those
+attitudes. The survey included an embedded experiment, where half of
+respondents were randomly assigned to a <strong>control</strong>
+condition and asked a straightforward question about legacy admissions,
+while the other half received a <strong>treatment</strong> condition
+that first presented Georgetown’s own admit-rate and enrollment
+statistics before asking the same question.</p>
 <hr />
 </div>
-<div id="research-design" class="section level2">
-<h2>Research Design</h2>
-<p>We fielded a survey of Georgetown undergraduates in April 2026 (n =
-216). The survey included a <strong>randomized experiment</strong> on
-the legacy admissions question: half of respondents (the
-<em>control</em> group) received a plain version of the question, while
-the other half (the <em>treatment</em> group) first saw
-Georgetown-specific statistics about legacy admit rates and student body
-composition before answering the same question.</p>
-<blockquote>
-<p><strong>Control:</strong> <em>“Do you support giving preference in
-college admissions to applicants whose parents or family members
-attended the same institution?”</em></p>
-</blockquote>
-<blockquote>
-<p><strong>Treatment:</strong> <em>“At Georgetown, legacy applicants are
-admitted at nearly three times the rate of non-legacy applicants, and
-legacy students make up a quarter to a third of the student body,
-outnumbering Black, Latino, and Native-American students combined. Do
-you support giving preference in college admissions to applicants whose
-parents or family members attended the same institution?”</em></p>
-</blockquote>
-<p>This design allows us to test whether information about Georgetown’s
-specific legacy program changes students’ views, or whether opinions are
-already fixed.</p>
-<p><strong>Important note on generalizability:</strong> This is a
-convenience sample of Georgetown undergraduates recruited through class
-networks. Results cannot be generalized to all Georgetown students or to
-college students more broadly. Nonetheless, the patterns we observe are
-internally informative. If a more representative sample yielded similar
-results, we could conclude that legacy admissions opposition is
-widespread and ideologically structured at elite institutions like
-Georgetown.</p>
+<div id="does-information-change-opinions-treatment-vs.-control"
+class="section level2">
+<h2>1. Does Information Change Opinions? Treatment vs. Control</h2>
+<p>To test whether learning about Georgetown’s own legacy program moves
+opinion, we randomly assigned respondents to either a plain question
+(control) or the same question preceded by Georgetown-specific
+statistics (treatment).</p>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-b42c9fd42a3e53958d90" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-b42c9fd42a3e53958d90">{"x":{"visdat":{"1579a27150a9c":["function () ","plotlyVisDat"]},"cur_data":"1579a27150a9c","attrs":{"1579a27150a9c":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","orientation":"h","name":"Strongly Support","x":[-5.343511450381679,-5.5555555555555554],"y":["Control","Treatment"],"marker":{"color":"#1a6b3c"},"text":["5.3%","5.6%"],"hovertemplate":"%{text}<extra>Strongly Support<\/extra>","inherit":true},"1579a27150a9c.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","orientation":"h","name":"Somewhat Support","x":[-38.931297709923662,-33.333333333333329],"y":["Control","Treatment"],"marker":{"color":"#7fc99a"},"text":["38.9%","33.3%"],"hovertemplate":"%{text}<extra>Somewhat Support<\/extra>","inherit":true},"1579a27150a9c.2":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","orientation":"h","name":"Somewhat Oppose","x":[35.877862595419849,36.507936507936506],"y":["Control","Treatment"],"marker":{"color":"#f4a27d"},"text":["35.9%","36.5%"],"hovertemplate":"%{text}<extra>Somewhat Oppose<\/extra>","inherit":true},"1579a27150a9c.3":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","orientation":"h","name":"Strongly Oppose","x":[19.847328244274809,24.603174603174601],"y":["Control","Treatment"],"marker":{"color":"#c0392b"},"text":["19.8%","24.6%"],"hovertemplate":"%{text}<extra>Strongly Oppose<\/extra>","inherit":true}},"layout":{"margin":{"b":90,"l":20,"t":64,"r":24},"barmode":"relative","title":{"text":"<b>Support for Legacy Admissions: Control vs. Treatment<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left"},"xaxis":{"domain":[0,1],"automargin":true,"title":"← Support  |  Oppose →","tickvals":[-60,-40,-20,0,20,40,60],"ticktext":["60%","40%","20%","0%","20%","40%","60%"],"gridcolor":"#e4e9f0","zeroline":true,"zerolinecolor":"#9aa5b4","zerolinewidth":2,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"}},"yaxis":{"domain":[0,1],"automargin":true,"tickfont":{"family":"Lato, sans-serif","size":12},"gridcolor":"#e4e9f0","title":[],"type":"category","categoryorder":"array","categoryarray":["Control","Treatment"]},"plot_bgcolor":"#fafbfc","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif"},"legend":{"orientation":"h","y":-0.38,"x":0.5,"xanchor":"center","font":{"family":"Lato, sans-serif","size":11},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#dde3ea","borderwidth":1},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"type":"bar","orientation":"h","name":"Strongly Support","x":[-5.343511450381679,-5.5555555555555554],"y":["Control","Treatment"],"marker":{"color":"#1a6b3c","line":{"color":"rgba(31,119,180,1)"}},"text":["5.3%","5.6%"],"hovertemplate":["%{text}<extra>Strongly Support<\/extra>","%{text}<extra>Strongly Support<\/extra>"],"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"type":"bar","orientation":"h","name":"Somewhat Support","x":[-38.931297709923662,-33.333333333333329],"y":["Control","Treatment"],"marker":{"color":"#7fc99a","line":{"color":"rgba(255,127,14,1)"}},"text":["38.9%","33.3%"],"hovertemplate":["%{text}<extra>Somewhat Support<\/extra>","%{text}<extra>Somewhat Support<\/extra>"],"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"type":"bar","orientation":"h","name":"Somewhat Oppose","x":[35.877862595419849,36.507936507936506],"y":["Control","Treatment"],"marker":{"color":"#f4a27d","line":{"color":"rgba(44,160,44,1)"}},"text":["35.9%","36.5%"],"hovertemplate":["%{text}<extra>Somewhat Oppose<\/extra>","%{text}<extra>Somewhat Oppose<\/extra>"],"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null},{"type":"bar","orientation":"h","name":"Strongly Oppose","x":[19.847328244274809,24.603174603174601],"y":["Control","Treatment"],"marker":{"color":"#c0392b","line":{"color":"rgba(214,39,40,1)"}},"text":["19.8%","24.6%"],"hovertemplate":["%{text}<extra>Strongly Oppose<\/extra>","%{text}<extra>Strongly Oppose<\/extra>"],"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Showing students Georgetown’s own legacy statistics didn’t move
+opinion much. Opposition was 55.7% in the control group and 61.1% in the
+treatment group, a modest difference. The one notable shift: “Strongly
+Oppose” held steady at about 20% in the control group and ticked up to
+25% in the treatment group, suggesting the Georgetown framing may have
+intensified opposition among those already opposed rather than
+converting supporters. Attitudes on this issue appear largely fixed,
+with information alone not enough to meaningfully change them.</p>
 <hr />
 </div>
-<div id="findings" class="section level2">
-<h2>Findings</h2>
-<div id="treatment-vs.-control-information-doesnt-move-opinion"
-class="section level3">
-<h3>1. Treatment vs. Control: Information Doesn’t Move Opinion</h3>
-<p><img src="index_files/figure-html/fig-treatment-1.png" alt="" width="768" /></p>
-<p>Providing students with Georgetown-specific data about legacy
-admissions had essentially no effect on overall opinion. In the control
-group, <strong>60.4%</strong> of respondents opposed legacy admissions
-(40.5% somewhat + 19.8% strongly). In the treatment group, opposition
-held nearly steady at <strong>61.0%</strong> (35.2% somewhat + 25.7%
-strongly). A two-sample t-test confirms this difference is statistically
-indistinguishable from zero (p = 0.60).</p>
-<p>The one subtle shift: “Strongly Oppose” increased by about 6
-percentage points when students saw the Georgetown data, while “Somewhat
-Oppose” fell by a similar margin. This suggests the information did not
-convert supporters — it intensified opposition among those already
-opposed. Attitudes toward legacy admissions appear largely fixed;
-factual information seems to reinforce prior beliefs rather than reshape
-them.</p>
+<div id="the-strongest-predictor-ideology" class="section level2">
+<h2>2. The Strongest Predictor: Ideology</h2>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-fe0f7927021912572034" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-fe0f7927021912572034">{"x":{"visdat":{"1579a7702ab0c":["function () ","plotlyVisDat"]},"cur_data":"1579a7702ab0c","attrs":{"1579a7702ab0c":{"x":[0,36.363636363636367,39.0625,62.222222222222221,89.090909090909093],"y":["Very Conservative","Conservative","Moderate","Liberal","Very Liberal"],"orientation":"h","marker":{"color":["#c0392b","#e07b54","#8e9bb5","#2980b9","#1a4a8a"],"line":{"color":"#ffffff","width":1.5}},"text":["0%","36.4%","39.1%","62.2%","89.1%"],"textposition":"outside","hovertemplate":"<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":56,"l":16,"t":64,"r":24},"title":{"text":"<b>% Opposing Legacy Admissions by Ideology<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left","pad":{"l":4}},"xaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Proportion Opposing (%)","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"showgrid":true,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"range":[0,106],"ticksuffix":"%"},"yaxis":{"domain":[0,1],"automargin":true,"title":{"text":"","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"categoryorder":"array","categoryarray":["Very Conservative","Conservative","Moderate","Liberal","Very Liberal"],"type":"category"},"plot_bgcolor":"#fafbfc","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif","size":12,"color":"#4a5568"},"legend":{"font":{"family":"Lato, sans-serif","size":11},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#dde3ea","borderwidth":1},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[0,36.363636363636367,39.0625,62.222222222222221,89.090909090909093],"y":["Very Conservative","Conservative","Moderate","Liberal","Very Liberal"],"orientation":"h","marker":{"color":["#c0392b","#e07b54","#8e9bb5","#2980b9","#1a4a8a"],"line":{"color":"#ffffff","width":1.5}},"text":["0%","36.4%","39.1%","62.2%","89.1%"],"textposition":["outside","outside","outside","outside","outside"],"hovertemplate":["<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>"],"showlegend":false,"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><strong>Ideology is the strongest predictor of opposition to legacy
+admissions.</strong> Among conservatives, only 36.4% oppose legacy
+admissions, compared to 39.1% of moderates, 62.2% of liberals, and a
+striking 89.1% of very liberal respondents. This represents a more than
+50 point increase in opposition from conservatives to very liberals,
+showing a clear and steep ideological gradient. Linear regression
+confirms this relationship: ideology has a coefficient of 0.22, meaning
+that for each step increase in liberal ideology, the probability of
+opposing legacy admissions increases by approximately 22 percentage
+points. This effect is highly statistically significant (p &lt; 0.001).
+The magnitude of this difference suggests that legacy admissions are not
+viewed as a neutral policy — they are interpreted through ideological
+frameworks about fairness and inequality. For conservatives, lower
+opposition may reflect a greater acceptance of institutional traditions,
+while for very liberals, opposition is nearly universal, suggesting
+legacy admissions are seen as fundamentally illegitimate.</p>
+<p>Moving in a more liberal direction is consistently and substantially
+associated with greater opposition to the policy. Ideology alone
+explains a meaningful share of the total variation in opposition —
+notable for a single predictor in survey data. Very liberal respondents
+at 89.1% opposition demonstrate that for the most ideologically
+committed, legacy admissions are seen as incompatible with core values
+of fairness and equal opportunity.</p>
+<table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+OLS Regression: Ideology Predicting Opposition
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Term
+</th>
+<th style="text-align:right;">
+Estimate
+</th>
+<th style="text-align:right;">
+Std. Error
+</th>
+<th style="text-align:right;">
+t value
+</th>
+<th style="text-align:right;">
+p value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+-0.238
+</td>
+<td style="text-align:right;">
+0.138
+</td>
+<td style="text-align:right;">
+-1.726
+</td>
+<td style="text-align:right;">
+0.0858
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ideology
+</td>
+<td style="text-align:left;">
+Ideology
+</td>
+<td style="text-align:right;">
+0.220
+</td>
+<td style="text-align:right;">
+0.035
+</td>
+<td style="text-align:right;">
+6.275
+</td>
+<td style="text-align:right;">
+0.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>The regression confirms this: each step toward more liberal ideology
+is associated with a meaningful increase in opposition (p &lt; 0.001),
+and ideology alone explains about 15% of the variation in responses (R²
+≈ 0.15).</p>
 <hr />
 </div>
-<div id="opposition-by-ideology-the-clearest-divide"
-class="section level3">
-<h3>2. Opposition by Ideology: The Clearest Divide</h3>
-<p><img src="index_files/figure-html/fig-ideology-1.png" alt="" width="720" /></p>
-<p>Ideology is the strongest predictor of views on legacy admissions —
-and the direction of the relationship is striking. Among <strong>very
-conservative</strong> respondents, opposition to legacy admissions
-reaches <strong>89%</strong>. Among <strong>conservatives</strong>, it
-is <strong>86%</strong>. Opposition then falls sharply moving leftward:
-moderates at 39%, liberals at 36%, and very liberals at just 11%.</p>
-<p>This is counterintuitive at first glance, but it reflects the
-ideological composition of Georgetown’s campus. The student body is
-overwhelmingly Democratic, meaning self-identified conservatives here
-are likely students who are ideologically to the right of their peers —
-and they apply a consistent merit-based framework to institutional
-preferences of all kinds. Very liberal students, by contrast, may view
-legacy admissions through a more institutional or equity-oriented lens
-that produces less uniform opposition, particularly at an elite
-university they chose to attend.</p>
-<p>A linear regression confirms this relationship is highly
-statistically significant. Ideology has a coefficient of
-<strong>0.22</strong> (p &lt; 0.001), meaning each step toward the
-conservative end of the scale is associated with roughly a 22 percentage
-point increase in the probability of opposing legacy admissions.
-Ideology alone explains approximately <strong>15%</strong> of the total
-variation in opposition (R² = 0.15) — a meaningful share for a single
-predictor in survey data.</p>
+<div id="opposition-by-party-id" class="section level2">
+<h2>3. Opposition by Party ID</h2>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2d81b4f8641e9d6d0f87" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-2d81b4f8641e9d6d0f87">{"x":{"visdat":{"1579a454149b":["function () ","plotlyVisDat"]},"cur_data":"1579a454149b","attrs":{"1579a454149b":{"x":[63.194444444444443,60.416666666666664,70,16.666666666666668],"y":["Democrat","Independent","Other","Republican"],"orientation":"h","marker":{"color":["#1a4a8a","#5d7fa8","#8e44ad","#c0392b"],"line":{"color":"#ffffff","width":1.5}},"text":["63.2%","60.4%","70%","16.7%"],"textposition":"outside","hovertemplate":"<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":56,"l":16,"t":64,"r":24},"title":{"text":"<b>% Opposing Legacy Admissions by Party ID<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left","pad":{"l":4}},"xaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Proportion Opposing (%)","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"showgrid":true,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"range":[0,90],"ticksuffix":"%"},"yaxis":{"domain":[0,1],"automargin":true,"title":{"text":"","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"categoryorder":"array","categoryarray":["Republican","Other","Independent","Democrat"],"type":"category"},"plot_bgcolor":"#fafbfc","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif","size":12,"color":"#4a5568"},"legend":{"font":{"family":"Lato, sans-serif","size":11},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#dde3ea","borderwidth":1},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[63.194444444444443,60.416666666666664,70,16.666666666666668],"y":["Democrat","Independent","Other","Republican"],"orientation":"h","marker":{"color":["#1a4a8a","#5d7fa8","#8e44ad","#c0392b"],"line":{"color":"#ffffff","width":1.5}},"text":["63.2%","60.4%","70%","16.7%"],"textposition":["outside","outside","outside","outside"],"hovertemplate":["<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>"],"showlegend":false,"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Party identification shows a similar but slightly weaker pattern
+compared to ideology. Among Democrats, 63.2% oppose legacy admissions,
+while independents show a nearly identical level at 60.4%. In contrast,
+only 16.7% of Republicans oppose legacy admissions, a roughly 46 point
+gap compared to Democrats. Respondents identifying as other show the
+highest opposition at 70.0%. The similarity between Democrats and
+independents suggests that opposition goes beyond strict partisan
+identity and reflects broader attitudes shared across non-Republican
+groups. The relatively small number of Republican respondents (n=12)
+means these findings should be interpreted cautiously, but the overall
+pattern reinforces the ideological divide observed earlier.</p>
 <hr />
 </div>
-<div id="opposition-by-party-id" class="section level3">
-<h3>3. Opposition by Party ID</h3>
-<p><img src="index_files/figure-html/fig-party-1.png" alt="" width="624" /></p>
-<p>Democrats (61%) and Independents (61%) oppose legacy admissions at
-nearly identical rates, suggesting opposition extends beyond strict
-partisan identity and is broadly shared among non-Republican students.
-Only 20% of Republicans oppose — a roughly 40-point gap — but with just
-10 Republican respondents in the sample, this figure should not be
-over-interpreted. When ideology is held constant in a multivariate
-regression, party affiliation adds no independent predictive power,
-confirming that ideology is the more fundamental driver.</p>
+<div id="opposition-by-household-income" class="section level2">
+<h2>4. Opposition by Household Income</h2>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-74286d4b3f0ca2bd99fd" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-74286d4b3f0ca2bd99fd">{"x":{"visdat":{"1579a72fe0e5":["function () ","plotlyVisDat"]},"cur_data":"1579a72fe0e5","attrs":{"1579a72fe0e5":{"x":["Under $50k","$50k-$99k","$100k-$149k","$150k-$249k","$250k-$499k","$500k+"],"y":[90,71.428571428571431,81.818181818181827,58.620689655172406,46.666666666666664,70.454545454545453],"mode":"lines+markers","line":{"color":"#1a4a8a","width":2.5,"shape":"spline","smoothing":0.59999999999999998},"marker":{"color":"#041E42","size":11,"line":{"color":"#ffffff","width":2.5}},"text":["90%","71.4%","81.8%","58.6%","46.7%","70.5%"],"hovertemplate":"<b>%{x}<\/b><br>%{text} opposing<extra><\/extra>","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":56,"l":16,"t":64,"r":24},"title":{"text":"<b>% Opposing Legacy Admissions by Household Income<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left","pad":{"l":4}},"xaxis":{"domain":[0,1],"automargin":true,"title":{"text":"","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"showgrid":true,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"categoryorder":"array","categoryarray":["Under $50k","$50k-$99k","$100k-$149k","$150k-$249k","$250k-$499k","$500k+"],"tickangle":-20,"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Proportion Opposing (%)","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"range":[0,105],"ticksuffix":"%"},"plot_bgcolor":"#fafbfc","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif","size":12,"color":"#4a5568"},"legend":{"font":{"family":"Lato, sans-serif","size":11},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#dde3ea","borderwidth":1},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Under $50k","$50k-$99k","$100k-$149k","$150k-$249k","$250k-$499k","$500k+"],"y":[90,71.428571428571431,81.818181818181827,58.620689655172406,46.666666666666664,70.454545454545453],"mode":"lines+markers","line":{"color":"#1a4a8a","width":2.5,"shape":"spline","smoothing":0.59999999999999998},"marker":{"color":"#041E42","size":11,"line":{"color":"#ffffff","width":2.5}},"text":["90%","71.4%","81.8%","58.6%","46.7%","70.5%"],"hovertemplate":["<b>%{x}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{x}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{x}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{x}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{x}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{x}<\/b><br>%{text} opposing<extra><\/extra>"],"type":"scatter","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>The relationship between income and opposition to legacy admissions
+is non-linear. Among the lowest-income respondents (under $50k),
+opposition is very high at 90%. Notably, opposition does not drop off
+cleanly from there, with middle income groups ($50k-$149k) showing
+opposition in the 71-82% range, while opposition dips most sharply among
+the $150k-$249k and $250k-$499k groups at 58.6% and 46.7% respectively,
+before rising again among the highest earners ($500k+) at 70.5%. The
+clearest pattern is that the upper-middle income bracket (i.e. the range
+most associated with Georgetown’s legacy admit population) shows the
+lowest opposition. This aligns with the expectation that those most
+likely to benefit from legacy admissions are less inclined to oppose it.
+The high opposition at both the lower end and very top of the income
+distribution suggests attitudes are not driven purely by economic
+self-interest, but by broader concerns about fairness and institutional
+legitimacy.</p>
+<p>The most analytically interesting finding is the relative complacency
+of the upper-middle income group. Respondents in the $250,000-$499,000
+range show the lowest opposition at 46.7%, and this is unlikely to be
+coincidental. Research on Georgetown’s legacy student population places
+the majority of legacy admits in precisely this income range. This means
+that respondents in this bracket are most likely to be the direct
+beneficiaries of legacy admissions or to know families who are. They are
+not the lower-income families most directly displaced by the practice,
+nor are they wealthy enough to feel insulated from admissions
+competition entirely. Their comparatively muted opposition reflects the
+policy’s most direct personal upside for this group. Legacy admissions
+is a conflict most acutely felt at the economic extremes, and it bears
+out in the data.</p>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-cc5b3a100ca060a8d26c" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-cc5b3a100ca060a8d26c">{"x":{"visdat":{"1579a6bd0b6f0":["function () ","plotlyVisDat"]},"cur_data":"1579a6bd0b6f0","attrs":{"1579a6bd0b6f0":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","name":"Conservative / Moderate","x":["Under $50k","$50k-$99k","$100k-$149k","$150k-$249k","$250k-$499k","$500k+"],"y":[100,55.555555555555557,50,33.333333333333336,21.052631578947366,52.941176470588239],"marker":{"color":"#c0392b","opacity":0.88},"hovertemplate":"<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Conservative/Moderate<\/extra>","inherit":true},"1579a6bd0b6f0.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","name":"Liberal / Very Liberal","x":["Under $50k","$50k-$99k","$100k-$149k","$150k-$249k","$250k-$499k","$500k+"],"y":[88.888888888888886,83.333333333333343,100,70,57.499999999999993,81.481481481481481],"marker":{"color":"#1a4a8a","opacity":0.88},"hovertemplate":"<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Liberal/Very Liberal<\/extra>","inherit":true}},"layout":{"margin":{"b":110,"l":60,"t":64,"r":24},"title":{"text":"<b>% Opposing Legacy Admissions by Income and Ideology<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left","pad":{"l":4}},"xaxis":{"domain":[0,1],"automargin":true,"title":{"text":"","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"showgrid":true,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"categoryorder":"array","categoryarray":["Under $50k","$50k-$99k","$100k-$149k","$150k-$249k","$250k-$499k","$500k+"],"tickangle":-35,"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Proportion Opposing (%)","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"range":[0,110],"ticksuffix":"%"},"plot_bgcolor":"#fafbfc","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif","size":12,"color":"#4a5568"},"legend":{"font":{"family":"Lato, sans-serif","size":11},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#dde3ea","borderwidth":1,"orientation":"h","y":-0.45000000000000001,"x":0.5,"xanchor":"center"},"barmode":"group","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"type":"bar","name":"Conservative / Moderate","x":["Under $50k","$50k-$99k","$100k-$149k","$150k-$249k","$250k-$499k","$500k+"],"y":[100,55.555555555555557,50,33.333333333333336,21.052631578947366,52.941176470588239],"marker":{"color":"#c0392b","opacity":0.88,"line":{"color":"rgba(31,119,180,1)"}},"hovertemplate":["<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Conservative/Moderate<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Conservative/Moderate<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Conservative/Moderate<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Conservative/Moderate<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Conservative/Moderate<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Conservative/Moderate<\/extra>"],"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"type":"bar","name":"Liberal / Very Liberal","x":["Under $50k","$50k-$99k","$100k-$149k","$150k-$249k","$250k-$499k","$500k+"],"y":[88.888888888888886,83.333333333333343,100,70,57.499999999999993,81.481481481481481],"marker":{"color":"#1a4a8a","opacity":0.88,"line":{"color":"rgba(255,127,14,1)"}},"hovertemplate":["<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Liberal/Very Liberal<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Liberal/Very Liberal<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Liberal/Very Liberal<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Liberal/Very Liberal<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Liberal/Very Liberal<\/extra>","<b>%{x}<\/b><br>%{y:.1f}% opposing<extra>Liberal/Very Liberal<\/extra>"],"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>When income is observed alongside ideology, the relationship becomes
+more nuanced. Among conservatives and moderates, higher income is
+associated with lower opposition to legacy admissions. This finding
+illustrates that wealthier individuals in these groups are more likely
+to support or accept the policy. In contrast, liberals and very liberals
+maintain consistently high levels of opposition regardless of income
+level, with opposition remaining above 60% and approaching 90% among
+very liberals. This finding suggests that for liberals, ideological
+beliefs about fairness override any potential economic incentives to
+support legacy admissions. In other words, income matters more for
+conservatives, but less so for liberals. This interaction is important
+because it shows that attitudes are not determined by a single factor,
+but by the combination of economic status and political beliefs. Still,
+ideology is the dominant force when shaping opinions even when
+controlling for income.</p>
 <hr />
 </div>
-<div id="opposition-by-household-income" class="section level3">
-<h3>4. Opposition by Household Income</h3>
-<p><img src="index_files/figure-html/fig-income-1.png" alt="" width="768" /></p>
-<p><img src="index_files/figure-html/fig-income-ideology-1.png" alt="" width="864" /></p>
-<p>Income shows a non-linear, U-shaped relationship with opposition.
-Lower-income students oppose legacy at the highest rates
-(<strong>80%</strong> under $50k), opposition dips in the middle-income
-range ($50k–$149k), then rises again at the top ($150k–$499k). The
-pattern is consistent with a self-interest story at the extremes —
-lower-income students are most directly displaced by legacy preferences,
-while very high-income students may oppose on principled grounds despite
-their potential eligibility.</p>
-<p>The most analytically interesting group is the middle. Students from
-$50k–$149k households — who are neither the primary beneficiaries nor
-the primary victims of legacy admissions — show the most muted
-opposition. Research suggests most Georgetown legacy admits come from
-families earning $250k+, well above the middle-income bracket; these
-students may feel insulated from the policy’s most direct
-consequences.</p>
-<p>When income is examined alongside ideology, a clearer pattern
-emerges: <strong>income matters far more for conservatives than for
-liberals</strong>. Among conservative and moderate students, higher
-family income is associated with meaningfully more support for legacy
-preferences. Among liberal and very liberal students, opposition remains
-high and consistent regardless of income — suggesting ideological
-conviction overrides economic self-interest for this group.</p>
+<div id="opposition-by-gender" class="section level2">
+<h2>5. Opposition by Gender</h2>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-a966e913bdeb936ca03c" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-a966e913bdeb936ca03c">{"x":{"visdat":{"1579a35db90a1":["function () ","plotlyVisDat"]},"cur_data":"1579a35db90a1","attrs":{"1579a35db90a1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"values":[53.684210526315788,46.315789473684212],"labels":["Oppose","Support"],"type":"pie","name":"Men","hole":0.62,"domain":{"x":[0.02,0.46000000000000002],"y":[0.050000000000000003,0.94999999999999996]},"marker":{"colors":["#c0392b","#d6e4f0"],"line":{"color":"#ffffff","width":3}},"textinfo":"none","hovertemplate":"<b>Men — %{label}<\/b><br>%{percent}<extra><\/extra>","inherit":true},"1579a35db90a1.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"values":[65.322580645161281,34.677419354838719],"labels":["Oppose","Support"],"type":"pie","name":"Women","hole":0.62,"domain":{"x":[0.54000000000000004,0.97999999999999998],"y":[0.050000000000000003,0.94999999999999996]},"marker":{"colors":["#c0392b","#d6e4f0"],"line":{"color":"#ffffff","width":3}},"textinfo":"none","hovertemplate":"<b>Women — %{label}<\/b><br>%{percent}<extra><\/extra>","inherit":true}},"layout":{"height":340,"margin":{"b":60,"l":10,"t":64,"r":10},"title":{"text":"<b>Opposition to Legacy Admissions by Gender<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left"},"annotations":[{"text":"<b>Men<\/b><br>53.7%<br><span style='color:#888;font-size:11px'>oppose<\/span>","x":0.20999999999999999,"y":0.5,"xref":"paper","yref":"paper","showarrow":false,"font":{"family":"Lato, sans-serif","size":15,"color":"#041E42"},"align":"center"},{"text":"<b>Women<\/b><br>65.3%<br><span style='color:#888;font-size:11px'>oppose<\/span>","x":0.79000000000000004,"y":0.5,"xref":"paper","yref":"paper","showarrow":false,"font":{"family":"Lato, sans-serif","size":15,"color":"#041E42"},"align":"center"}],"showlegend":true,"legend":{"orientation":"h","y":-0.080000000000000002,"x":0.5,"xanchor":"center","font":{"family":"Lato, sans-serif","size":11}},"plot_bgcolor":"#ffffff","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif"},"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"values":[53.684210526315788,46.315789473684212],"labels":["Oppose","Support"],"type":"pie","name":"Men","hole":0.62,"domain":{"x":[0.02,0.46000000000000002],"y":[0.050000000000000003,0.94999999999999996]},"marker":{"color":"rgba(31,119,180,1)","colors":["#c0392b","#d6e4f0"],"line":{"color":"#ffffff","width":3}},"textinfo":"none","hovertemplate":["<b>Men — %{label}<\/b><br>%{percent}<extra><\/extra>","<b>Men — %{label}<\/b><br>%{percent}<extra><\/extra>"],"frame":null},{"values":[65.322580645161281,34.677419354838719],"labels":["Oppose","Support"],"type":"pie","name":"Women","hole":0.62,"domain":{"x":[0.54000000000000004,0.97999999999999998],"y":[0.050000000000000003,0.94999999999999996]},"marker":{"color":"rgba(255,127,14,1)","colors":["#c0392b","#d6e4f0"],"line":{"color":"#ffffff","width":3}},"textinfo":"none","hovertemplate":["<b>Women — %{label}<\/b><br>%{percent}<extra><\/extra>","<b>Women — %{label}<\/b><br>%{percent}<extra><\/extra>"],"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Not all variables examined proved to be meaningful predictors of
+opposition to legacy admissions. Gender and grade level showed no
+significant relationship with opposition and are not emphasized in this
+analysis. It is worth noting that women in the sample skew slightly more
+liberal than men. Given that ideology is by far the strongest predictor
+of opposition, any gender gap in opposition that does appear is more
+likely a downstream reflection of that ideological difference. Women are
+not more opposed to legacy admissions because of their gender but
+because ideology is doing the explanatory work, and women in this sample
+lean more liberal.</p>
 <hr />
 </div>
-<div id="a-note-on-gender-and-year-in-school" class="section level3">
-<h3>5. A Note on Gender and Year in School</h3>
-<p>Women in the sample oppose legacy admissions at a modestly higher
-rate than men (65% vs. 53%), and first-year students are the most
-opposed (71%), with opposition softening slightly in later years.
-However, neither of these relationships achieves conventional levels of
-statistical significance in multivariate regression once ideology is
-controlled. Women in this sample skew slightly more liberal than men,
-which likely accounts for the gender gap. Year in school does not
-meaningfully predict views once other factors are held constant.</p>
+<div id="opposition-by-year-in-school" class="section level2">
+<h2>6. Opposition by Year in School</h2>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-c46e19e610107c72a4fa" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-c46e19e610107c72a4fa">{"x":{"visdat":{"1579a1812b995":["function () ","plotlyVisDat"]},"cur_data":"1579a1812b995","attrs":{"1579a1812b995":{"x":[72.340425531914903,59.22330097087378,53.658536585365859,57.575757575757578],"y":["First-year","Sophomore","Junior","Senior"],"orientation":"h","marker":{"color":["#041E42","#1a4a8a","#2E6DA4","#6699c8"],"line":{"color":"#ffffff","width":1.5}},"text":["72.3%","59.2%","53.7%","57.6%"],"textposition":"outside","hovertemplate":"<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":56,"l":16,"t":64,"r":24},"title":{"text":"<b>% Opposing Legacy Admissions by Year in School<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left","pad":{"l":4}},"xaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Proportion Opposing (%)","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"showgrid":true,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"range":[0,90],"ticksuffix":"%"},"yaxis":{"domain":[0,1],"automargin":true,"title":{"text":"","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"categoryorder":"array","categoryarray":["Senior","Junior","Sophomore","First-year"],"type":"category"},"plot_bgcolor":"#fafbfc","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif","size":12,"color":"#4a5568"},"legend":{"font":{"family":"Lato, sans-serif","size":11},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#dde3ea","borderwidth":1},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[72.340425531914903,59.22330097087378,53.658536585365859,57.575757575757578],"y":["First-year","Sophomore","Junior","Senior"],"orientation":"h","marker":{"color":["#041E42","#1a4a8a","#2E6DA4","#6699c8"],"line":{"color":"#ffffff","width":1.5}},"text":["72.3%","59.2%","53.7%","57.6%"],"textposition":["outside","outside","outside","outside"],"hovertemplate":["<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>","<b>%{y}<\/b><br>%{text} opposing<extra><\/extra>"],"showlegend":false,"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>First-years are the most opposed (72%), with opposition softening
+slightly as students progress through school. Upperclassmen may become
+more accustomed to or aware of how institutional relationships work,
+though this difference is not statistically significant.</p>
 <hr />
 </div>
+<div id="does-the-framing-work-differently-by-ideology"
+class="section level2">
+<h2>7. Does the Framing Work Differently by Ideology?</h2>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-02d38edc4997aa891ec6" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-02d38edc4997aa891ec6">{"x":{"visdat":{"1579a184301c4":["function () ","plotlyVisDat"]},"cur_data":"1579a184301c4","attrs":{"1579a184301c4":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","name":"Control","x":["Very Conservative","Conservative","Moderate","Liberal","Very Liberal"],"y":[null,50,32.500000000000007,64.102564102564102,90.322580645161281],"marker":{"color":"#1a4a8a","opacity":0.88},"hovertemplate":"<b>%{x} — Control<\/b><br>%{y:.1f}% opposing<extra><\/extra>","inherit":true},"1579a184301c4.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","name":"Treatment","x":["Very Conservative","Conservative","Moderate","Liberal","Very Liberal"],"y":[0,28.571428571428569,50,60.784313725490193,87.5],"marker":{"color":"#C8A951","opacity":0.92000000000000004},"hovertemplate":"<b>%{x} — Treatment<\/b><br>%{y:.1f}% opposing<extra><\/extra>","inherit":true}},"layout":{"margin":{"b":56,"l":16,"t":64,"r":24},"title":{"text":"<b>Treatment Effect on Legacy Opposition by Ideology<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left","pad":{"l":4}},"xaxis":{"domain":[0,1],"automargin":true,"title":{"text":"","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"showgrid":true,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"categoryorder":"array","categoryarray":["Very Conservative","Conservative","Moderate","Liberal","Very Liberal"],"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Proportion Opposing (%)","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"range":[0,112],"ticksuffix":"%"},"plot_bgcolor":"#fafbfc","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif","size":12,"color":"#4a5568"},"legend":{"font":{"family":"Lato, sans-serif","size":11},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#dde3ea","borderwidth":1,"orientation":"h","y":-0.25,"x":0.5,"xanchor":"center"},"barmode":"group","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"type":"bar","name":"Control","x":["Conservative","Moderate","Liberal","Very Liberal"],"y":[50,32.500000000000007,64.102564102564102,90.322580645161281],"marker":{"color":"#1a4a8a","opacity":0.88,"line":{"color":"rgba(31,119,180,1)"}},"hovertemplate":["<b>%{x} — Control<\/b><br>%{y:.1f}% opposing<extra><\/extra>","<b>%{x} — Control<\/b><br>%{y:.1f}% opposing<extra><\/extra>","<b>%{x} — Control<\/b><br>%{y:.1f}% opposing<extra><\/extra>","<b>%{x} — Control<\/b><br>%{y:.1f}% opposing<extra><\/extra>"],"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"type":"bar","name":"Treatment","x":["Very Conservative","Conservative","Moderate","Liberal","Very Liberal"],"y":[0,28.571428571428569,50,60.784313725490193,87.5],"marker":{"color":"#C8A951","opacity":0.92000000000000004,"line":{"color":"rgba(255,127,14,1)"}},"hovertemplate":["<b>%{x} — Treatment<\/b><br>%{y:.1f}% opposing<extra><\/extra>","<b>%{x} — Treatment<\/b><br>%{y:.1f}% opposing<extra><\/extra>","<b>%{x} — Treatment<\/b><br>%{y:.1f}% opposing<extra><\/extra>","<b>%{x} — Treatment<\/b><br>%{y:.1f}% opposing<extra><\/extra>","<b>%{x} — Treatment<\/b><br>%{y:.1f}% opposing<extra><\/extra>"],"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Among conservatives, opposition decreased from 50.0% in the control
+group to 28.6% in the treatment group, suggesting that exposure to
+Georgetown-specific legacy statistics may have reinforced existing
+support among conservatives rather than weakening it, though this
+finding should be interpreted cautiously given the small number of
+conservative respondents (n=11). Moderates moved in the opposite
+direction: opposition increased from 32.5% in the control group to 50.0%
+in the treatment group, suggesting the treatment had its strongest
+persuasive effect on respondents in the ideological middle.</p>
+<hr />
+</div>
+<div id="do-random-and-self-selected-respondents-differ"
+class="section level2">
+<h2>8. Do Random and Self-Selected Respondents Differ?</h2>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-51092c5bd70b2f4a0dab" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-51092c5bd70b2f4a0dab">{"x":{"visdat":{"1579a6b6d4106":["function () ","plotlyVisDat"]},"cur_data":"1579a6b6d4106","attrs":{"1579a6b6d4106":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","name":"Randomly Contacted","x":["Strongly Support","Somewhat Support","Somewhat Oppose","Strongly Oppose"],"y":[6.666666666666667,33.333333333333329,38.333333333333336,21.666666666666668],"marker":{"color":"#1a4a8a","opacity":0.88},"hovertemplate":"<b>%{x}<\/b><br>%{y:.1f}%<extra>Randomly Contacted<\/extra>","inherit":true},"1579a6b6d4106.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","name":"Self-Selected","x":["Strongly Support","Somewhat Support","Somewhat Oppose","Strongly Oppose"],"y":[4.225352112676056,43.661971830985912,33.802816901408448,18.30985915492958],"marker":{"color":"#C8A951","opacity":0.92000000000000004},"hovertemplate":"<b>%{x}<\/b><br>%{y:.1f}%<extra>Self-Selected<\/extra>","inherit":true}},"layout":{"margin":{"b":56,"l":16,"t":64,"r":24},"title":{"text":"<b>Legacy Admissions Views: Random Contact vs. Self-Selected<\/b>","font":{"family":"Lato, sans-serif","size":14,"color":"#041E42"},"x":0,"xanchor":"left","pad":{"l":4}},"xaxis":{"domain":[0,1],"automargin":true,"title":{"text":"","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"showgrid":true,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"type":"category","categoryorder":"array","categoryarray":["Somewhat Oppose","Somewhat Support","Strongly Oppose","Strongly Support"]},"yaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Percentage (%)","font":{"family":"Lato, sans-serif","size":12,"color":"#5a6472"}},"gridcolor":"#e4e9f0","zeroline":false,"tickfont":{"family":"Lato, sans-serif","size":11,"color":"#5a6472"},"range":[0,58],"ticksuffix":"%"},"plot_bgcolor":"#fafbfc","paper_bgcolor":"#ffffff","font":{"family":"Lato, sans-serif","size":12,"color":"#4a5568"},"legend":{"font":{"family":"Lato, sans-serif","size":11},"bgcolor":"rgba(255,255,255,0.95)","bordercolor":"#dde3ea","borderwidth":1,"orientation":"h","y":-0.25,"x":0.5,"xanchor":"center"},"barmode":"group","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"type":"bar","name":"Randomly Contacted","x":["Strongly Support","Somewhat Support","Somewhat Oppose","Strongly Oppose"],"y":[6.666666666666667,33.333333333333329,38.333333333333336,21.666666666666668],"marker":{"color":"#1a4a8a","opacity":0.88,"line":{"color":"rgba(31,119,180,1)"}},"hovertemplate":["<b>%{x}<\/b><br>%{y:.1f}%<extra>Randomly Contacted<\/extra>","<b>%{x}<\/b><br>%{y:.1f}%<extra>Randomly Contacted<\/extra>","<b>%{x}<\/b><br>%{y:.1f}%<extra>Randomly Contacted<\/extra>","<b>%{x}<\/b><br>%{y:.1f}%<extra>Randomly Contacted<\/extra>"],"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"type":"bar","name":"Self-Selected","x":["Strongly Support","Somewhat Support","Somewhat Oppose","Strongly Oppose"],"y":[4.225352112676056,43.661971830985912,33.802816901408448,18.30985915492958],"marker":{"color":"#C8A951","opacity":0.92000000000000004,"line":{"color":"rgba(255,127,14,1)"}},"hovertemplate":["<b>%{x}<\/b><br>%{y:.1f}%<extra>Self-Selected<\/extra>","<b>%{x}<\/b><br>%{y:.1f}%<extra>Self-Selected<\/extra>","<b>%{x}<\/b><br>%{y:.1f}%<extra>Self-Selected<\/extra>","<b>%{x}<\/b><br>%{y:.1f}%<extra>Self-Selected<\/extra>"],"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Self-selected respondents (friends of students in the class) and
+randomly contacted students hold broadly similar views on legacy
+admissions, with 56.6% of self-selected respondents opposing legacy
+admissions compared to 61.0% of randomly contacted students. This
+difference is modest and not statistically significant, which is
+reassuring. A large gap here would suggest that people with strong
+opinions disproportionately sought out the survey, biasing the results.
+The absence of a significant difference increases confidence that our
+findings accurately reflect student opinion rather than selection
+effects.</p>
+<hr />
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
-<p>Three findings stand out from this survey.</p>
-<p><strong>First, Georgetown undergraduates broadly oppose legacy
-admissions.</strong> Roughly 60% of respondents opposed the practice
-regardless of question framing, suggesting opposition is the modal view
-on this campus — not a niche position.</p>
-<p><strong>Second, ideology is the dominant and overwhelmingly
-significant predictor of legacy views</strong>, with conservatives
-opposing at far higher rates than liberals. This pattern is
-counterintuitive given typical left-right associations with
-institutional reform, but it reflects the specific ideological landscape
-at Georgetown, where self-identified conservatives represent a distinct
-and principled minority applying a consistent merit-based framework.</p>
-<p><strong>Third, information about Georgetown’s own legacy program does
-not move opinion.</strong> Showing students that legacy students
-outnumber all underrepresented minority groups combined had no
-measurable effect on the share who oppose the policy. Attitudes are
-largely fixed, and facts intensify rather than reshape them.</p>
-<p>For Georgetown’s administration, these findings suggest that the
-student constituency most likely to move on legacy admissions is not the
-liberal majority — whose views are already formed — but rather the
-moderate middle, whose opposition is softer and more sensitive to
-context. If the campus ideological composition shifts, or if moderates
-become more informed about the policy’s scope, overall opposition is
-likely to grow. The question is not whether Georgetown students oppose
-legacy admissions; most already do. The question is whether that
-opposition is strong enough, and organized enough, to translate into
-institutional change.</p>
+<p>This survey of Georgetown undergraduates reveals <strong>strong
+majority opposition to legacy admissions</strong>, with roughly 60% of
+respondents opposing the practice, a number that held stable regardless
+of whether they were shown Georgetown-specific statistics. This null
+treatment effect suggests that attitudes toward legacy admissions are
+well-formed and resistant to informational interventions, at least among
+this population of politically engaged college students.</p>
+<p><strong>The most consistent predictor of opposition is political
+ideology.</strong> At Georgetown, very liberal students oppose legacy at
+the highest rates (nearly 9 in 10), while conservatives show
+substantially lower opposition, reflecting how ideology shapes
+interpretations of fairness and institutional tradition. Household
+income, gender, and year in school show weaker and less consistent
+relationships once ideology is accounted for.</p>
 <hr />
-<p><em>Survey fielded April 2026. Georgetown undergraduate convenience
-sample (n = 216). Results should not be generalized beyond this sample
-without additional evidence.</em></p>
+<p><strong>References</strong></p>
+<p>Georgetown University. (2024). <em>Get to know the class of 2028 at
+Georgetown</em>. <a
+href="https://www.georgetown.edu/news/get-to-know-the-class-of-2028-at-georgetown/"
+class="uri">https://www.georgetown.edu/news/get-to-know-the-class-of-2028-at-georgetown/</a></p>
+<p>Georgetown University. (2025). <em>Georgetown announces new
+undergraduate admissions processes after 2 years of analysis</em>. <a
+href="https://www.georgetown.edu/news/georgetown-announces-new-undergraduate-admissions-processes/"
+class="uri">https://www.georgetown.edu/news/georgetown-announces-new-undergraduate-admissions-processes/</a></p>
+<p>Steele, E., &amp; Toscano, N. (2025, April 24). GU legacies’
+admission rate three times non-legacy, according to internal
+presentation. <em>The Georgetown Hoya</em>. <a
+href="https://thehoya.com/news/news-top/developing-gu-legacies-admission-rate-three-times-non-legacy-according-to-internal-presentation/"
+class="uri">https://thehoya.com/news/news-top/developing-gu-legacies-admission-rate-three-times-non-legacy-according-to-internal-presentation/</a>
+<br><br><br></p>
 </div>
 
 
@@ -490,7 +645,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3",
+      selectors: "h1,h2",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
