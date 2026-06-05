@@ -1,0 +1,82 @@
+/* ── Typography ───────────────────────────────────────── */
+body {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #222;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 30px 60px;
+}
+
+h1.title {
+  font-size: 2em;
+  color: #1a1a2e;
+  border-bottom: 3px solid #2E6DA4;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+}
+
+h3.subtitle {
+  font-size: 1.05em;
+  color: #555;
+  font-weight: normal;
+  margin-top: 0;
+  font-style: italic;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  color: #2E6DA4;
+  font-size: 1.4em;
+  border-left: 4px solid #2E6DA4;
+  padding-left: 12px;
+  margin-top: 2.5em;
+}
+
+h3 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  font-size: 1.15em;
+  margin-top: 1.8em;
+}
+
+/* ── Blockquotes (survey questions) ──────────────────── */
+blockquote {
+  background: #f0f4f9;
+  border-left: 4px solid #2E6DA4;
+  margin: 1.2em 0;
+  padding: 12px 20px;
+  font-style: italic;
+  color: #333;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ── TOC ──────────────────────────────────────────────── */
+#TOC {
+  background: #f8f9fa;
+  border: 1px solid #dce3ea;
+  border-radius: 6px;
+  padding: 16px 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9em;
+}
+
+/* ── Figures ──────────────────────────────────────────── */
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* ── Footer note ──────────────────────────────────────── */
+em {
+  color: #666;
+  font-size: 0.88em;
+}
+
+/* ── Horizontal rule ──────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid #dce3ea;
+  margin: 2.5em 0;
+}
